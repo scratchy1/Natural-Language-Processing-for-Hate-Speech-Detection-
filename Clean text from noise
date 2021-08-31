@@ -1,0 +1,18 @@
+import re
+
+#Clean text from noise
+def clean_text(text):
+    #Filter to allow only alphabets
+    text = re.sub(r'[^a-zA-Z\']', ' ', text)
+    
+    #Remove Unicode characters
+    text = re.sub(r'[^\x00-\x7F]+', '', text)
+    
+    #Convert to lowercase to maintain consistency
+    text = text.lower()
+       
+    return text
+
+
+dataset['clean_text'] = dataset.tweet.apply(lambda x: clean_text(x))
+
