@@ -1,0 +1,5 @@
+#Load the dataset
+import pandas as pd
+
+dataset = pd.read_csv('final_dataset_basicmlmodel.csv')
+dataset.head()
