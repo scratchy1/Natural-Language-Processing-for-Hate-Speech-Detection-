@@ -1,0 +1,6 @@
+from sklearn.model_selection import train_test_split
+
+X = dataset[['word_count', 'any_neg', 'any_rare', 'char_count', 'is_question']]
+y = dataset.label
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=27)
