@@ -1,0 +1,2 @@
+for index, tweet in enumerate(dataset["tweet"][10:15]):
+    print(index+1,".",tweet)
