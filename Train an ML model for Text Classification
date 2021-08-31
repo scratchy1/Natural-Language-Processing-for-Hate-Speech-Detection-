@@ -1,0 +1,8 @@
+from sklearn.naive_bayes import GaussianNB
+
+#Initialize GaussianNB classifier
+model = GaussianNB()
+#Fit the model on the train dataset
+model = model.fit(X_train, y_train)
+#Make predictions on the test dataset
+pred = model.predict(X_test)
